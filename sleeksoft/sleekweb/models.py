@@ -43,7 +43,9 @@ class Product(models.Model):
         verbose_name_plural = "Sản phẩm"
     
     Name = models.CharField('Name', max_length=50,blank=True, null=True)
+    Name_En = models.CharField('Name', max_length=50,blank=True, null=True)
     Description = models.TextField('Description', max_length=50,blank=True, null=True)
+    Description_En = models.TextField('Description', max_length=50,blank=True, null=True)
     Price = models.IntegerField('Price', max_length=50,blank=True, null=True)
     Avatar = models.ImageField(upload_to='Avatar_Product', null=True,blank=True)
     Creation_time = models.DateTimeField('Thời gian tạo',auto_now_add=True)

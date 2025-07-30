@@ -91,15 +91,27 @@
             </div>
             <div class="flex flex-col justify-center items-center w-full">
                 <label class="font-semibold">
+                    Tên sản phẩm Tiếng Việt
+                </label>
+                <input type="text" name="Name_En" value="{{obj_Product.Name_En}}" class="rounded-md w-full" required />
+            </div>
+            <div class="flex flex-col justify-center items-center w-full">
+                <label class="font-semibold">
                     Giá sản phẩm
                 </label>
                 <input type="number" name="Price" value="{{obj_Product.Price}}" class="rounded-md w-full" required />
             </div>
             <div class="flex flex-col justify-center items-center w-full">
                 <label class="font-semibold">
-                    Mô tả sản phẩm
+                    Mô tả sản phẩm Tiếng Việt
                 </label>
                 <textarea class="rounded-md w-full h-[80px] p-3" name="Description" required>{{obj_Product.Description}}</textarea>
+            </div>
+            <div class="flex flex-col justify-center items-center w-full">
+                <label class="font-semibold">
+                    Mô tả sản phẩm Tiếng Anh
+                </label>
+                <textarea class="rounded-md w-full h-[80px] p-3" name="Description_En" required>{{obj_Product.Description_En}}</textarea>
             </div>
             <div class="flex gap-1 bg-white p-2 rounded-md border-[1px] border-[#6b7280]">
                 <div class="flex flex-col justify-center items-center w-full">

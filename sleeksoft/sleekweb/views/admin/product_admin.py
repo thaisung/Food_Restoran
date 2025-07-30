@@ -94,7 +94,9 @@ def product_add_admin(request):
         fields = {}
         fields['Avatar']= request.FILES.get('Avatar')
         fields['Name'] = request.POST.get('Name')
-        fields['Description'] = request.POST.get('Title')
+        fields['Description'] = request.POST.get('Description')
+        fields['Name_En'] = request.POST.get('Name_En')
+        fields['Description_En'] = request.POST.get('Description_En')
         fields['Price'] = request.POST.get('Price')
         obj = Product.objects.create(**fields)
         return redirect('product_admin')
@@ -113,12 +115,16 @@ def product_edit_admin(request,pk):
         fields = {}
         fields['Avatar']= request.FILES.get('Avatar')
         fields['Name'] = request.POST.get('Name')
-        fields['Description'] = request.POST.get('Title')
+        fields['Description'] = request.POST.get('Description')
+        fields['Name_En'] = request.POST.get('Name_En')
+        fields['Description_En'] = request.POST.get('Description_En')
         fields['Price'] = request.POST.get('Price')
 
         obj = Product.objects.get(pk=pk)
         obj.Name = fields['Name']
         obj.Description = fields['Description']
+        obj.Name_En = fields['Name_En']
+        obj.Description_En = fields['Description_En']
         obj.Price = fields['Price']
         if fields['Avatar']:
             obj.Avatar = fields['Avatar']

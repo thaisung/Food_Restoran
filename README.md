@@ -1,8 +1,8 @@
-# Triển khai dự án Website Restoran.online lên VPS (ubuntu)
+# Triển khai dự án Website vinhvu.xyz lên VPS (ubuntu)
 
 ## Phần chuẩn bị
 - Mua Vps hệ ubuntu bản thấp nhất 20.04 trở lên
-- Đăng ký 1 tên miền chính chủ Restoran.online từ các bên cho thuê.
+- Đăng ký 1 tên miền chính chủ vinhvu.xyz từ các bên cho thuê.
 - Vào DNS tên miền đã thuê và trỏ ip VPS đã mua.
 
 ## Phần kết nối VPS để tiến hành triển khai dự án
@@ -308,7 +308,7 @@ Hướng dẫn Nginx về nơi tìm các tệp tĩnh mà chúng tôi đã thu th
 
 ```bash
 server {
-    server_name Restoran.online;
+    server_name vinhvu.xyz;
 
     location = /favicon.ico { access_log off; log_not_found off; }
     location /static/ {

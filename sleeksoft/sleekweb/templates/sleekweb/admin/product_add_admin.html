@@ -81,9 +81,15 @@
             {% csrf_token %}
             <div class="flex flex-col justify-center items-center w-full">
                 <label class="font-semibold">
-                    Tên sản phẩm
+                    Tên sản phẩm Tiếng Việt
                 </label>
                 <input type="text" name="Name" class="rounded-md w-full" required />
+            </div>
+            <div class="flex flex-col justify-center items-center w-full">
+                <label class="font-semibold">
+                    Tên sản phẩm Tiếng Anh
+                </label>
+                <input type="text" name="Name_En" class="rounded-md w-full" required />
             </div>
             <div class="flex flex-col justify-center items-center w-full">
                 <label class="font-semibold">
@@ -93,9 +99,15 @@
             </div>
             <div class="flex flex-col justify-center items-center w-full">
                 <label class="font-semibold">
-                    Mô tả sản phẩm
+                    Mô tả sản phẩm Tiếng việt
                 </label>
                 <textarea class="rounded-md w-full h-[60px] p-3" name="Description" required></textarea>
+            </div>
+            <div class="flex flex-col justify-center items-center w-full">
+                <label class="font-semibold">
+                    Mô tả sản phẩm Tiếng Anh
+                </label>
+                <textarea class="rounded-md w-full h-[60px] p-3" name="Description_En" required></textarea>
             </div>
             <div class="flex justify-center items-center gap-1 bg-white p-2 rounded-md border-[1px] border-[#6b7280] w-full">
                 <div class="flex flex-col justify-center items-center">
