@@ -75,6 +75,7 @@ def menu(request):
         context = {}
         context['domain'] = settings.DOMAIN
         context['lg'] = request.COOKIES.get('language') or 'VI'
+        context['list_Product'] = Product.objects.all()
         print('context:',context)
         return render(request, 'sleekweb/client/menu.html', context, status=200)
     
