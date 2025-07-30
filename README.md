@@ -1,8 +1,8 @@
-# Triển khai dự án Website thaivietimbiss.online lên VPS (ubuntu)
+# Triển khai dự án Website Restoran.online lên VPS (ubuntu)
 
 ## Phần chuẩn bị
 - Mua Vps hệ ubuntu bản thấp nhất 20.04 trở lên
-- Đăng ký 1 tên miền chính chủ thaivietimbiss.online từ các bên cho thuê.
+- Đăng ký 1 tên miền chính chủ Restoran.online từ các bên cho thuê.
 - Vào DNS tên miền đã thuê và trỏ ip VPS đã mua.
 
 ## Phần kết nối VPS để tiến hành triển khai dự án
@@ -34,7 +34,7 @@ sudo -u postgres psql
 
 Tạo cơ sở dữ liệu cho dự án của chúng tôi
 ```bash
-CREATE DATABASE thaivietimbiss;
+CREATE DATABASE Restoran;
 ```
 
 Lưu ý:  Mọi câu lệnh Postgres PHẢI kết thúc bằng dấu chấm phẩy
@@ -62,9 +62,9 @@ ALTER ROLE postgres SET default_transaction_isolation TO 'read committed';
 ALTER ROLE postgres SET timezone TO 'UTC';
 ```
 
-Bây giờ, hãy cung cấp cho người dùng cơ sở dữ liệu của chúng tôi 'postgres' để có tất cả các đặc quyền trong cơ sở dữ liệu 'thaivietimbiss' .
+Bây giờ, hãy cung cấp cho người dùng cơ sở dữ liệu của chúng tôi 'postgres' để có tất cả các đặc quyền trong cơ sở dữ liệu 'Restoran' .
 ```bash
-GRANT ALL PRIVILEGES ON DATABASE thaivietimbiss TO postgres;
+GRANT ALL PRIVILEGES ON DATABASE Restoran TO postgres;
 ```
 
 Bây giờ chúng tôi đã tạo thành công cơ sở dữ liệu và người dùng cơ sở dữ liệu có tất cả các đặc quyền đối với cơ sở dữ liệu mà chúng tôi đã tạo trong PostgreSQL. Thoát khỏi môi trường Postgres.
@@ -308,7 +308,7 @@ Hướng dẫn Nginx về nơi tìm các tệp tĩnh mà chúng tôi đã thu th
 
 ```bash
 server {
-    server_name thaivietimbiss.online;
+    server_name Restoran.online;
 
     location = /favicon.ico { access_log off; log_not_found off; }
     location /static/ {
