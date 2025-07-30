@@ -105,7 +105,7 @@ AUTH_USER_MODEL = 'sleekweb.User'
 DOMAIN = 'http://127.0.0.1:8000'
 
 MIDDLEWARE = [
-    "django_browser_reload.middleware.BrowserReloadMiddleware",
+    # "django_browser_reload.middleware.BrowserReloadMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
